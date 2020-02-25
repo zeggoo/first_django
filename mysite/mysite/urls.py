@@ -15,9 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from django.conf.urls import url
+from . import settings
 
 urlpatterns = [
     path('', include('polls.urls')),        # 장고걸스 테스트용
-    path('polls/', include('polls.urls')),
+    # path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
 ]
+
+# 디버그 툴바 설정 추가
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns += [
+        url(r'^__debug__/', include(debug_toolbar.urls)),
+    ]
