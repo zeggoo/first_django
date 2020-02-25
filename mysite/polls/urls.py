@@ -5,5 +5,7 @@ from . import views
 urlpatterns = [
     path('', views.post_list, name='post_list'),    # 장고걸스 테스트용
     path('post/<int:pk>/', views.post_detail, name='post_detail'), # 장고걸스 테스트용
+    path('post/new', views.post_new, name='post_new'), # 장고걸스 테스트용
+    path('post/<int:pk>/eidt/', views.post_edit, name='post_edit'), # 장고걸스 테스트용
     path('', views.index, name="index"),
 ]
