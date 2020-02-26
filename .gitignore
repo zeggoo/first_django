@@ -130,6 +130,7 @@ dmypy.json
 
 # virtualevn
 /first_django_env
+/first_django_venv
 
 # vscode
 /.vscode
